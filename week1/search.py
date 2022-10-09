@@ -95,7 +95,6 @@ def query():
 
     #### Step 4.b.ii
     response = opensearch.search(body=query_obj, index="bbuy_products")
-    # TODO: Replace me with an appropriate call to OpenSearch
     # Postprocess results here if you so desire
 
     #print(response)
@@ -130,7 +129,6 @@ def create_query(user_query, filters, sort="_score", sortDir="desc"):
                 "score_mode": "avg",
                 
         "functions": [
-            
             {
                 "field_value_factor": {
                     "field": "salesRankLongTerm",
